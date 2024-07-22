@@ -31,8 +31,7 @@ public class CategoriaControllerTest {
 	@BeforeAll
 	void start() {
 		categoriaRepository.deleteAll();
-
-		categoriaRepository.save(new Categoria(1L, "Perfumaria"));
+        categoriaRepository.save(new Categoria(1L, "Perfumaria"));
 		categoriaRepository.save(new Categoria(2L, "Antidepressivo"));
 		categoriaRepository.save(new Categoria(3L, "Analgésicos"));
 	}
@@ -55,7 +54,7 @@ public class CategoriaControllerTest {
 	@DisplayName("Atualizar uma Categoria")
 	public void deveAtualizarUmaCategoria() {
 		
-		Categoria categoria = new Categoria(1L, "Perfumaria");
+		Categoria categoria = new Categoria(1L, "Perfumaria e Cosméticos");
 		
 		HttpEntity<Categoria> corpoRequisicao = new HttpEntity<Categoria>(categoria);
 		
