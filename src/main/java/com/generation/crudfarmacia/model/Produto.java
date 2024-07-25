@@ -38,6 +38,19 @@ public class Produto {
     @JsonIgnoreProperties("produtos")
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
+    
+    public Produto(Long id, String nome, String descricao, Float preco, int quantidade,Categoria categoria) {
+		this.id = id;
+		this.nome = nome;
+		this.descricao=descricao;
+		this.preco=preco;
+		this.quantidade=quantidade;
+		this.categoria = categoria;
+	}
+	
+	public Produto() {
+		
+	}
 
 	public Long getId() {
 		return id;
